@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vote Selection Page</title>
+    <link rel="stylesheet" href="styles.css">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		
+		h1 {
+			margin-top: 50px;
+			margin-bottom: 30px;
+		}
+		
+		
+	</style>
+</head>
+<body>
+	<h1>Select your party:</h1>
+	<div class="vote-option" id="party1">
+        <img src="assets/cleaning.png" >
+        <h3>The Common Man's Party</h3>
+	</div>
+    
+	<div class="vote-option" id="party2">
+		<img src="assets/lotus.png" >
+        <h3>The All-Promise Party</h3>
+	</div>
+	<div class="vote-option" id="party3">
+		<img src="assets/hello.png" >
+        <h3>The Dynastic Democracy Party</h3>
+	</div>
+	
+	<div id="vote-cast">
+		<div class="tick">&#10004;</div>
+		<p>Your vote has been cast.</p>
+	</div>
+	
+	<script >// function to display the "vote cast" animation
+        function showVoteCast() {
+          // hide the vote options
+          document.querySelectorAll('.vote-option').forEach(function(element) {
+              element.style.display = 'none';
+          });
+          
+          // display the "vote cast" animation
+          document.getElementById('vote-cast').style.display = 'block';
+      }
+      
+      // add event listeners to the vote options
+      document.getElementById('party1').addEventListener('click', function() {
+          showVoteCast();
+      });
+      document.getElementById('party2').addEventListener('click', function() {
+          showVoteCast();
+      });
+      document.getElementById('party3').addEventListener('click', function() {
+          showVoteCast();
+      });
+		
+	</script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+</html>
